@@ -7,7 +7,7 @@
   <!-- will be replaced with elements/elements.vulcanized.html -->
   <link rel="import" href="tyw/elements/elements.html">
   <!-- endreplace-->
-  <link rel="import" href="tyw/styles/twtheme.html">
+  <link rel="import" href="tyw/styles/titheme.html">
 <style is="custom-style">
 paper-fab{position:absolute;bottom:1em;right:1em;}
 .container{@apply(--layout-horizontal);}
@@ -23,10 +23,16 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
         <h4>test</h4>
     </paper-toolbar>
     <paper-material>
+    <paper-icon-item><iron-icon icon="perm-identity"></iron-icon>Sign-in</paper-icon-item>
+    </paper-material>
+    <paper-material>
     <paper-icon-item><iron-icon icon="event"></iron-icon>Chronologcal index</paper-icon-item>
     </paper-material>
+    <paper-material>
+    <paper-icon-item><iron-icon icon="settings"></iron-icon>Setting</paper-icon-item>
+    </paper-material>
   </paper-scroll-header-panel>
-  <paper-scroll-header-panel main style="background: #00695c;">
+  <paper-scroll-header-panel main>
 <template is="dom-bind"> <!-- Template {{{ -->
     <paper-toolbar class="medium-tall">
         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
@@ -42,21 +48,57 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
     <div class="container"> <!-- {{{ -->
     <div class="flex"> <!-- {{{ -->
     <iron-pages selected="{{selected}}">
-    <div><!-- Page 1 {{{--> 
+    <div style="margin:0.3em;"><!-- Page 1 {{{--> 
       <div class="item">
       <!-- Cards -->
       <paper-material elevation="2">
         <div class="container">
           <div><h3>Entry Name</h3></div>
           <div class="flex"></div>
-          <paper-icon-item style="padding-top: 1em;"><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
+          <paper-icon-item><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
         </div>
         <div class="items">
-          <div><p><strong>Summary:</strong> Test summary {{selected}}</p></div>
+          <div><p><strong>Summary:</strong> Test summary
+            A thoughts about something.
+            </p></div>
+          <paper-icon-button icon="more-horiz"
+                             onclick="document.querySelector('#a1').toggle();"></paper-icon-button>
+          <iron-collapse id="a1">
           <div> <p>This is test post.</p>
            <p>Addressing 40,000 people who attended the commemoration ceremony
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
            Abe called for worldwide nuclear disarmament.</p></div>
+          </iron-collapse>
         </div>
       </paper-material>
       <!-- /Cards -->
@@ -68,18 +110,73 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
           <paper-icon-item style="padding-top: 1em;"><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
         </div>
         <div class="items">
-          <div><p><strong>Summary:</strong> Test summary {{selected}}</p></div>
+          <div><p><strong>Summary:</strong> Test summary</p></div>
+          <paper-icon-button icon="more-horiz"
+                             onclick="document.querySelector('#a2').toggle();"></paper-icon-button>
+          <iron-collapse id="a2">
           <div> <p>This is test post.</p>
            <p>Addressing 40,000 people who attended the commemoration ceremony
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
            Abe called for worldwide nuclear disarmament.</p></div>
+          </iron-collapse>
         </div>
       </paper-material>
       <!-- /Cards -->
       </div> <!-- item -->
     </div> <!-- /Page 1 }}} -->
     <div><!-- Page 2 --> <!-- {{{ -->
-      <div class="container">
+      <p class="container">
         <paper-material>History and Politics</paper-material>
         <paper-material>Science Fiction</paper-material>
         <paper-material>Movies</paper-material>
@@ -89,9 +186,9 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
         <paper-material>Web Technology</paper-material>
         <paper-material>Travel and places</paper-material>
         <paper-material>Foods and Drink</paper-material>
-      </div>
+      </p>
     </div><!-- /Page 2  }}} -->
-    <div><!-- Page 3 --> <!-- {{{ -->
+    <div style="margin-top: 1em;"><!-- Page 3 --> <!-- {{{ -->
       <div class="item">
         <paper-toolbar><h3>A</h3></paper-toolbar>
        <div class="container">
@@ -108,8 +205,10 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
     </iron-pages>
     </div><!-- flex }}} -->
   <div class="item" style="width:20%;"><!-- {{{ Left Panel-->
-  <h3>Tags</h3>
-  <h3>Things</h3>
+    <div style="margin:0em 0.5em 0em 0.5em;">
+      <h3>Tags</h3>
+      <h3>Things</h3>
+    </div>
   </div> <!-- Left Panel}}} -->
   </div><!-- container }}} -->
 </template> <!-- }}} -->
