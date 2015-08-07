@@ -1,0 +1,133 @@
+<html>
+<head>
+  <title>Testing Polymer Layout</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="tyw/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="tyw/elements/elements.html">
+  <!-- endreplace-->
+  <link rel="import" href="tyw/styles/twtheme.html">
+<style is="custom-style">
+paper-fab{position:absolute;bottom:1em;right:1em;}
+.container{@apply(--layout-horizontal);}
+.items{@apply(--layout-vertical);}
+.flex{@apply(--layout-flex);}
+</style>
+</head>
+<body>
+<paper-drawer-panel responsive-width="8000px">
+  <paper-scroll-header-panel drawer>
+    <paper-toolbar class="medium-tall">
+        <paper-icon-button icon="chevron-left" paper-drawer-toggle></paper-icon-button>
+        <h4>test</h4>
+    </paper-toolbar>
+    <paper-material>
+    <paper-icon-item><iron-icon icon="event"></iron-icon>Chronologcal index</paper-icon-item>
+    </paper-material>
+  </paper-scroll-header-panel>
+  <paper-scroll-header-panel main style="background: #00695c;">
+<template is="dom-bind"> <!-- Template {{{ -->
+    <paper-toolbar class="medium-tall">
+        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        <div class=flex tabindex="0" style="align: right;"></div><h4>polymer layout</h4>
+        <paper-tabs class="bottom fit" style="height:20px;" align-bottom
+                                       selected="{{selected}}" --paper-tabs-selection-bar-color="yellow">
+          <style>paper-tab { font-size: small;}</style>
+            <paper-tab>diary </paper-tab>
+            <paper-tab>themes</paper-tab>
+            <paper-tab>hencyclopedia</paper-tab>
+        </paper-tabs>
+    </paper-toolbar>
+    <div class="container"> <!-- {{{ -->
+    <div class="flex"> <!-- {{{ -->
+    <iron-pages selected="{{selected}}">
+    <div><!-- Page 1 {{{--> 
+      <div class="item">
+      <!-- Cards -->
+      <paper-material elevation="2">
+        <div class="container">
+          <div><h3>Entry Name</h3></div>
+          <div class="flex"></div>
+          <paper-icon-item style="padding-top: 1em;"><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
+        </div>
+        <div class="items">
+          <div><p><strong>Summary:</strong> Test summary {{selected}}</p></div>
+          <div> <p>This is test post.</p>
+           <p>Addressing 40,000 people who attended the commemoration ceremony
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           Abe called for worldwide nuclear disarmament.</p></div>
+        </div>
+      </paper-material>
+      <!-- /Cards -->
+      <!-- Cards -->
+      <paper-material elevation="2">
+        <div class="container">
+          <div><h3>Entry Name</h3></div>
+          <div class="flex"></div>
+          <paper-icon-item style="padding-top: 1em;"><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
+        </div>
+        <div class="items">
+          <div><p><strong>Summary:</strong> Test summary {{selected}}</p></div>
+          <div> <p>This is test post.</p>
+           <p>Addressing 40,000 people who attended the commemoration ceremony
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           Abe called for worldwide nuclear disarmament.</p></div>
+        </div>
+      </paper-material>
+      <!-- /Cards -->
+      </div> <!-- item -->
+    </div> <!-- /Page 1 }}} -->
+    <div><!-- Page 2 --> <!-- {{{ -->
+      <div class="container">
+        <paper-material>History and Politics</paper-material>
+        <paper-material>Science Fiction</paper-material>
+        <paper-material>Movies</paper-material>
+        <paper-material>Music</paper-material>
+        <paper-material>Electronics</paper-material>
+        <paper-material>Internet Services</paper-material>
+        <paper-material>Web Technology</paper-material>
+        <paper-material>Travel and places</paper-material>
+        <paper-material>Foods and Drink</paper-material>
+      </div>
+    </div><!-- /Page 2  }}} -->
+    <div><!-- Page 3 --> <!-- {{{ -->
+      <div class="item">
+        <paper-toolbar><h3>A</h3></paper-toolbar>
+       <div class="container">
+         <paper-material>android</paper-material>
+         <paper-material>anderson</paper-material> 
+       </div>
+       <paper-toolbar><h3>B</h3></paper-toolbar>
+       <div class="container">
+         <paper-material>Bang and Olufsen</paper-material>
+         <paper-material>Boyer and Wilkins</paper-material>
+      </div>
+      </div>
+    </div><!-- /Page 3 }}} -->
+    </iron-pages>
+    </div><!-- flex }}} -->
+  <div class="item" style="width:20%;"><!-- {{{ Left Panel-->
+  <h3>Tags</h3>
+  <h3>Things</h3>
+  </div> <!-- Left Panel}}} -->
+  </div><!-- container }}} -->
+</template> <!-- }}} -->
+  </paper-scroll-header-panel>
+</paper-drawer-panel>
+<paper-fab icon="search" tabindex="0"></paper-fab>
+<section id="footer-section">
+<footer id="footer"><div><p id="copyright">&copy; 2015 taoy.</p></div>
+</footer>
+</section>
+<script>
+  document.addEventListener('WebComponentsReady', function () {
+  var template = document.querySelector('template[is="dom-bind"]');
+  template.selected = 0; // selected is an index by default
+  });
+</script>
+</body>
+</html>
+<!--
+# vim:set sw=2 ts=2 sts=2 expandtab foldmethod=marker:
+-->
