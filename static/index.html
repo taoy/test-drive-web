@@ -6,6 +6,7 @@
   <script src="tyw/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- will be replaced with elements/elements.vulcanized.html -->
   <link rel="import" href="tyw/elements/elements.html">
+  <link rel="import" href="tyw/elements/myelements.html">
   <!-- endreplace-->
   <link rel="import" href="tyw/styles/titheme.html">
 <style is="custom-style">
@@ -20,23 +21,13 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
   <paper-scroll-header-panel drawer>
     <paper-toolbar class="medium-tall">
         <paper-icon-button icon="chevron-left" paper-drawer-toggle></paper-icon-button>
-        <h4>test</h4>
+        <h4>Back</h4>
     </paper-toolbar>
-    <paper-material>
-    <paper-icon-item><iron-icon icon="perm-identity"></iron-icon>Sign-in</paper-icon-item>
-    </paper-material>
-    <paper-material>
-    <paper-icon-item><iron-icon icon="face"></iron-icon>About</paper-icon-item>
-    </paper-material>
-    <paper-material>
-    <paper-icon-item><iron-icon icon="event"></iron-icon>Chronologcal index</paper-icon-item>
-    </paper-material>
-    <paper-material>
-    <paper-icon-item><iron-icon icon="link"></iron-icon>Links</paper-icon-item>
-    </paper-material>
-    <paper-material>
-    <paper-icon-item><iron-icon icon="settings"></iron-icon>Setting</paper-icon-item>
-    </paper-material>
+    <taoy-menu-item icon="perm-identity" menu="Sign-in"></taoy-menu-item>
+    <taoy-menu-item icon="face" menu="About"></taoy-menu-item>
+    <taoy-menu-item icon="event" menu="Chronologcal index"></taoy-menu-item>
+    <taoy-menu-item icon="link" menu="Links"></taoy-menu-item>
+    <taoy-menu-item icon="settings" menu="Setting"></taoy-menu-item>
   </paper-scroll-header-panel>
   <paper-scroll-header-panel main>
 <template is="dom-bind"> <!-- Template {{{ -->
