@@ -26,7 +26,13 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
     <paper-icon-item><iron-icon icon="perm-identity"></iron-icon>Sign-in</paper-icon-item>
     </paper-material>
     <paper-material>
+    <paper-icon-item><iron-icon icon="face"></iron-icon>About</paper-icon-item>
+    </paper-material>
+    <paper-material>
     <paper-icon-item><iron-icon icon="event"></iron-icon>Chronologcal index</paper-icon-item>
+    </paper-material>
+    <paper-material>
+    <paper-icon-item><iron-icon icon="link"></iron-icon>Links</paper-icon-item>
     </paper-material>
     <paper-material>
     <paper-icon-item><iron-icon icon="settings"></iron-icon>Setting</paper-icon-item>
@@ -36,13 +42,11 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
 <template is="dom-bind"> <!-- Template {{{ -->
     <paper-toolbar class="medium-tall">
         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-        <div class=flex tabindex="0" style="align: right;"></div><h4>polymer layout</h4>
-        <paper-tabs class="bottom fit" style="height:20px;" align-bottom
-                                       selected="{{selected}}" --paper-tabs-selection-bar-color="yellow">
-          <style>paper-tab { font-size: small;}</style>
-            <paper-tab>diary </paper-tab>
-            <paper-tab>themes</paper-tab>
-            <paper-tab>hencyclopedia</paper-tab>
+        <div class=flex tabindex="0" style="align: right;"></div><h1>site Title</h1>
+        <paper-tabs class="bottom fit" style="height:20px;" align-bottom selected="{{selected}}">
+            <paper-tab>section 0</paper-tab>
+            <paper-tab>section 1</paper-tab>
+            <paper-tab>section 2</paper-tab>
         </paper-tabs>
     </paper-toolbar>
     <div class="container"> <!-- {{{ -->
@@ -207,7 +211,12 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
   <div class="item" style="width:20%;"><!-- {{{ Left Panel-->
     <div style="margin:0em 0.5em 0em 0.5em;">
       <h3>Tags</h3>
+      <p>Test, python, web, linux, windows, photo, japan</p>
       <h3>Things</h3>
+      <p>computer, camera, phone, speakers, headphones</p>
+      <h3>Places</h3>
+      <p>japan, tokyo, nara, kyushu, kumamoto, takaoka</p>
+      <p>
     </div>
   </div> <!-- Left Panel}}} -->
   </div><!-- container }}} -->
