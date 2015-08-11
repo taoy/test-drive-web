@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Testing Polymer Layout</title>
+  <title>Henkutsu: taoy.Org</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="tyw/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -25,19 +25,24 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
     </paper-toolbar>
     <taoy-menu-item icon="perm-identity" menu="Sign-in"></taoy-menu-item>
     <taoy-menu-item icon="face" menu="About"></taoy-menu-item>
-    <taoy-menu-item icon="event" menu="Chronological index"></taoy-menu-item>
-    <taoy-menu-item icon="link" menu="Links"></taoy-menu-item>
+    <taoy-menu-item icon="event" menu="Index"></taoy-menu-item>
+    <taoy-menu-item icon="social:school" menu="Items"></taoy-menu-item>
+    <taoy-menu-item icon="apps" menu="Categories"></taoy-menu-item>
     <taoy-menu-item icon="settings" menu="Setting"></taoy-menu-item>
   </paper-scroll-header-panel>
   <paper-scroll-header-panel main>
 <template is="dom-bind"> <!-- Template {{{ -->
     <paper-toolbar class="medium-tall">
         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-        <div class=flex tabindex="0" style="align: right;"></div><h1>site Title</h1>
-        <paper-tabs class="bottom fit" style="height:20px;" align-bottom selected="{{selected}}">
-            <paper-tab>section 0</paper-tab>
-            <paper-tab>section 1</paper-tab>
-            <paper-tab>section 2</paper-tab>
+        <div class=flex tabindex="0" style="align: right;"></div><h1>Henkutsu</h1>
+        <paper-tabs class="bottom fit" style="font-size:18px;height:2em;" selected="{{selected}}">
+            <paper-tab>Diary</paper-tab> |
+            <paper-tab>People</paper-tab>
+            <paper-tab>Places</paper-tab>
+            <paper-tab>Things</paper-tab>
+            <paper-tab>Events</paper-tab>
+            <paper-tab>Technology</paper-tab>
+            <paper-tab>Idea</paper-tab>
         </paper-tabs>
     </paper-toolbar>
     <div class="container"> <!-- {{{ -->
@@ -46,70 +51,23 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
     <div style="margin:0.3em;"><!-- Page 1 {{{--> 
       <div class="item">
       <!-- Cards -->
-      <paper-material elevation="2">
-        <div class="container">
-          <div><h3>Entry Name</h3></div>
-          <div class="flex"></div>
-          <paper-icon-item><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
-        </div>
-        <div class="items">
-          <div><p><strong>Summary:</strong> Test summary
-            A thoughts about something.
-            </p></div>
-          <paper-icon-button icon="more-horiz"
-                             onclick="document.querySelector('#a1').toggle();"></paper-icon-button>
-          <iron-collapse id="a1">
-          <div> <p>This is test post.</p>
-           <p>Addressing 40,000 people who attended the commemoration ceremony
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
-           Abe called for worldwide nuclear disarmament.</p></div>
-          </iron-collapse>
-        </div>
-      </paper-material>
+      <taoy-entry datetime="2015/08/10">
+        <h3>Test title</h3>
+        <summary>summary text</summary>
+        <p>This is the content. It will okey?.
+        I'm not sure.
+        </p>
+      </taoy-entry>
       <!-- /Cards -->
       <!-- Cards -->
-      <paper-material elevation="2">
-        <div class="container">
-          <div><h3>Entry Name</h3></div>
-          <div class="flex"></div>
-          <paper-icon-item style="padding-top: 1em;"><iron-icon icon="event"></iron-icon>04, August 2015</paper-icon-item>
-        </div>
-        <div class="items">
-          <div><p><strong>Summary:</strong> Test summary</p></div>
-          <paper-icon-button icon="more-horiz"
-                             onclick="document.querySelector('#a2').toggle();"></paper-icon-button>
-          <iron-collapse id="a2">
-          <div> <p>This is test post.</p>
+      <taoy-entry datetime="04, August 2015">
+        <h3>試しのエントリ</h3>
+        <summary>Polymer のカスタムエレメントを試しています。
+        なかなか便利だと思いますね。</summary>
+        <div>
+          <p>
+          そんなわけで、Polymer を使ってみようと考えているのですよ。</p>
+          <h4>This is test post.</h4>
            <p>Addressing 40,000 people who attended the commemoration ceremony
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
@@ -164,9 +122,7 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
            at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
            Abe called for worldwide nuclear disarmament.</p></div>
-          </iron-collapse>
-        </div>
-      </paper-material>
+      </taoy-entry>
       <!-- /Cards -->
       </div> <!-- item -->
     </div> <!-- /Page 1 }}} -->
