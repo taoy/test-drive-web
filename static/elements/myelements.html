@@ -6,7 +6,7 @@
     </style>
     <template>
         <paper-button>
-            <paper-icon-item><iron-icon icon="{{icon}}"></iron-icon>{{menu}}</paper-icon-item>
+            <paper-icon-item><a href="{{url}}"><iron-icon icon="{{icon}}"></iron-icon>{{menu}}</a></paper-icon-item>
         </paper-button>
     </template>
     <script>
@@ -14,6 +14,9 @@
             is: "taoy-menu-item",
             properties: {
                 icon: {
+                    type: String
+                },
+                url: {
                     type: String
                 },
                 menu: {
@@ -68,3 +71,7 @@
         });
     </script>
 </dom-module>
+
+<!--
+# vim:set sw=2 ts=2 sts=2 expandtab foldmethod=indent:
+-->

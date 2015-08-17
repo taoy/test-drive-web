@@ -23,12 +23,12 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
         <paper-icon-button icon="chevron-left" paper-drawer-toggle></paper-icon-button>
         <h4>Back</h4>
     </paper-toolbar>
-    <taoy-menu-item icon="perm-identity" menu="Sign-in"></taoy-menu-item>
-    <taoy-menu-item icon="face" menu="About"></taoy-menu-item>
-    <taoy-menu-item icon="event" menu="Index"></taoy-menu-item>
-    <taoy-menu-item icon="social:school" menu="Items"></taoy-menu-item>
-    <taoy-menu-item icon="apps" menu="Categories"></taoy-menu-item>
-    <taoy-menu-item icon="settings" menu="Setting"></taoy-menu-item>
+    <taoy-menu-item icon="perm-identity" menu="Sign-in" url="signin.html"></taoy-menu-item>
+    <taoy-menu-item icon="face" menu="About" url="about.html"></taoy-menu-item>
+    <taoy-menu-item icon="event" menu="Index" url="chrono.html"></taoy-menu-item>
+    <taoy-menu-item icon="social:school" menu="Items" url="items.html"></taoy-menu-item>
+    <taoy-menu-item icon="apps" menu="Categories" url="category.html"></taoy-menu-item>
+    <taoy-menu-item icon="settings" menu="Setting" url="settings.html"></taoy-menu-item>
   </paper-scroll-header-panel>
   <paper-scroll-header-panel main>
 <template is="dom-bind"> <!-- Template {{{ -->
@@ -36,7 +36,7 @@ paper-fab{position:absolute;bottom:1em;right:1em;}
         <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
         <div class=flex tabindex="0" style="align: right;"></div><h1>Henkutsu</h1>
         <paper-tabs class="bottom fit" style="font-size:18px;height:2em;" selected="{{selected}}">
-            <paper-tab>Latest</paper-tab> |
+            <paper-tab style="font-family:sans-serif;">Latest</paper-tab>
             <paper-tab>People</paper-tab>
             <paper-tab>Places</paper-tab>
             <paper-tab>Things</paper-tab>
