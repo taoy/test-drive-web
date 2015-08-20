@@ -37,14 +37,14 @@
         paper-icon-item{margin:0.3em 0.4em 0em 0em;}
     </style>
     <template>
-      <paper-material elevation="2">
+      <paper-material elevation="2" style$={{background}}>
         <div class="container">
             <div><content select="h3"></content></div>
             <div class="flex"></div>
-          <paper-icon-item><iron-icon icon="event"></iron-icon>{{datetime}}</paper-icon-item>
+            <paper-icon-item><iron-icon icon="event"></iron-icon>{{datetime}}</paper-icon-item>
         </div>
         <div class="items">
-            <div class=summary><p><strong>Summary:</strong> <content select="summary"></content></p></div>
+            <div class=summary><p><strong>Summary:</strong><content select="summary"></content></p></div>
             <iron-collapse id="collapse">
               <div><content></content></div>
           </iron-collapse>
@@ -52,15 +52,13 @@
             <paper-icon-item><iron-icon icon="more-horiz"></iron-icon></paper-icon-item>
         </paper-button>
         </div>
+        </div>
       </paper-material>
     </template>
     <script>
         Polymer({
             is: "taoy-entry",
             properties: {
-                sumtext: {
-                    type: String
-                },
                 datetime: {
                     type: String
                 }
