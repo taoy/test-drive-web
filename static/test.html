@@ -1,0 +1,390 @@
+<html>
+<head>
+  <title>Henkutsu: taoy.Org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="tyw/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="tyw/elements/elements.html">
+  <link rel="import" href="tyw/elements/myelements.html">
+  <!-- endreplace-->
+  <link rel="stylesheet" href="/tyw/styles/normalize.css">
+  <link rel="import" href="tyw/styles/app-theme.html">
+<style is="custom-style">
+paper-fab{position:absolute;bottom:1em;right:1em;}
+.container{@apply(--layout-horizontal);}
+.items{@apply(--layout-vertical);}
+.flex{@apply(--layout-flex);}
+.holder{display:-webkit-flex;display:flex;-webkit-flex-flow:rowwrap;flex-flow:rowwrap;}
+.c1,.c2,.c3,.c4,.c5{width:100%;}
+@media(min-width:600px){.c2,.c3,.c4,.c5{width:50%;}}
+@media(min-width:800px){.c1{width:60%;}.c2{width:40%;}.c3,.c4,.c5{width:33.33%;}}
+@media(min-width:800px){.holder{width:800px;margin-left:auto;margin-right:auto;}}
+</style>
+</head>
+<body>
+<paper-drawer-panel responsive-width="8000px">
+  <paper-scroll-header-panel drawer>
+    <paper-toolbar class="medium-tall">
+        <paper-icon-button icon="chevron-left" paper-drawer-toggle></paper-icon-button>
+        <h4>Back</h4>
+    </paper-toolbar>
+    <taoy-menu-item icon="perm-identity" menu="Sign-in" url="signin.html"></taoy-menu-item>
+    <taoy-menu-item icon="face" menu="About" url="about.html"></taoy-menu-item>
+    <taoy-menu-item icon="event" menu="Index" url="chrono.html"></taoy-menu-item>
+    <taoy-menu-item icon="social:school" menu="Items" url="items.html"></taoy-menu-item>
+    <taoy-menu-item icon="apps" menu="Categories" url="category.html"></taoy-menu-item>
+    <taoy-menu-item icon="settings" menu="Setting" url="settings.html"></taoy-menu-item>
+  </paper-scroll-header-panel>
+  <paper-scroll-header-panel main>
+<template is="dom-bind"> <!-- Template {{{ -->
+    <paper-toolbar class="medium-tall">
+        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        <div class=flex tabindex="0" style="align: right;"></div><h1>Henkutsu</h1>
+        <paper-tabs class="bottom fit" style="font-size:16px;height:2em;" selected="{{selected}}">
+            <paper-tab style="font-family:sans-serif;">Latest</paper-tab>
+            <paper-tab>People</paper-tab>
+            <paper-tab>Places</paper-tab>
+            <paper-tab>Things</paper-tab>
+            <paper-tab>Events</paper-tab>
+            <paper-tab>Technology</paper-tab>
+            <paper-tab>Idea</paper-tab>
+        </paper-tabs>
+    </paper-toolbar>
+    <div class="holder">
+    <iron-pages selected="{{selected}}">
+    <div style="margin:0.3em;"><!-- Page 1 {{{--> 
+      <div class="item">
+      <!-- Cards -->
+      <div class="c1">
+      <taoy-entry datetime="2015/08/10" style="background:url(tyw/resources/pics/88926009.jpg);">
+        <h3>Test title (Main Entry)</h3>
+        <summary>summary text</summary>
+        <p>This is the content. It will okey?.
+        I'm not sure.
+        </p>
+      </taoy-entry>
+      </div>
+      <!-- /Cards -->
+      <!-- Cards -->
+      <div class="c2">
+      <taoy-entry datetime="04, August 2015">
+        <h3>試しのエントリ</h3>
+        <summary>Polymer のカスタムエレメントを試しています。
+        なかなか便利だと思いますね。</summary>
+        <div>
+          <p>
+          そんなわけで、Polymer を使ってみようと考えているのですよ。</p>
+          <h4>This is test post.</h4>
+           <p>Addressing 40,000 people who attended the commemoration ceremony
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           Abe called for worldwide nuclear disarmament.</p></div>
+      </taoy-entry>
+      </div>
+      <div class="c3">
+      <taoy-entry datetime="05, August 2015">
+        <h3>試しのエントリ2</h3>
+        <summary>Polymer のカスタムエレメントを試しています。
+        なかなか便利だと思いますね。</summary>
+        <div>
+          <p>
+          そんなわけで、Polymer を使ってみようと考えているのですよ。</p>
+          <h4>This is test post.</h4>
+           <p>Addressing 40,000 people who attended the commemoration ceremony
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           Abe called for worldwide nuclear disarmament.</p></div>
+      </taoy-entry>
+      </div>
+      <div class="c4">
+      <taoy-entry datetime="06, August 2015">
+        <h3>試しのエントリ3</h3>
+        <summary>Polymer のカスタムエレメントを試しています。
+        なかなか便利だと思いますね。</summary>
+        <div>
+          <p>
+          そんなわけで、Polymer を使ってみようと考えているのですよ。</p>
+          <h4>This is test post.</h4>
+           <p>Addressing 40,000 people who attended the commemoration ceremony
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           at Hiroshima's peace park near the epicentre of the 1945 attack, Mr
+           Abe called for worldwide nuclear disarmament.</p></div>
+      </taoy-entry>
+      </div>
+      <!-- /Cards -->
+      </div> <!-- item -->
+    </div> <!-- /Page 1 }}} -->
+    <div><!-- Page 2 --> <!-- {{{ -->
+      <p class="container">
+        <paper-material>History and Politics</paper-material>
+        <paper-material>Science Fiction</paper-material>
+        <paper-material>Movies</paper-material>
+        <paper-material>Music</paper-material>
+        <paper-material>Electronics</paper-material>
+        <paper-material>Internet Services</paper-material>
+        <paper-material>Web Technology</paper-material>
+        <paper-material>Travel and places</paper-material>
+        <paper-material>Foods and Drink</paper-material>
+      </p>
+    </div><!-- /Page 2  }}} -->
+    <div style="margin-top: 1em;"><!-- Page 3 --> <!-- {{{ -->
+      <div class="item">
+        <paper-toolbar><h3>A</h3></paper-toolbar>
+       <div class="container">
+         <paper-material>android</paper-material>
+         <paper-material>anderson</paper-material> 
+       </div>
+       <paper-toolbar><h3>B</h3></paper-toolbar>
+       <div class="container">
+         <paper-material>Bang and Olufsen</paper-material>
+         <paper-material>Boyer and Wilkins</paper-material>
+      </div>
+      </div>
+    </div><!-- /Page 3 }}} -->
+    </iron-pages>
+  <div class="c5"><!-- {{{ Left Panel-->
+    <div style="margin:0em 0.5em 0em 0.5em;">
+      <h3>Tags</h3>
+      <p>Test, python, web, linux, windows, photo, japan</p>
+      <h3>Things</h3>
+      <p>computer, camera, phone, speakers, headphones</p>
+      <h3>Places</h3>
+      <p>japan, tokyo, nara, kyushu, kumamoto, takaoka</p>
+      <p>
+    </div>
+  </div> <!-- Left Panel}}} -->
+  </div> <!-- holder }}}-->
+</template> <!-- }}} -->
+  </paper-scroll-header-panel>
+</paper-drawer-panel>
+<paper-fab icon="search" tabindex="0"></paper-fab>
+<section id="footer-section">
+<footer id="footer"><div><p id="copyright">&copy; 2015 taoy.</p></div>
+</footer>
+</section>
+<script>
+  document.addEventListener('WebComponentsReady', function () {
+  var template = document.querySelector('template[is="dom-bind"]');
+  template.selected = 0; // selected is an index by default
+  });
+</script>
+<h1>a</h1>
+<div
+  style="background:url(tyw/resources/pics/88926009.jpg);background-color:#0000;">
+  <p>
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  tests saldsajasd aslalalalasdf  klbajbla
+  </p>
+</div>
+
+</body>
+</html>
+<!--
+# vim:set sw=2 ts=2 sts=2 expandtab foldmethod=indent:
+-->
